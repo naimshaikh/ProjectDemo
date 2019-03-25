@@ -1,0 +1,33 @@
+{
+  "designation": [
+    {
+      "DesignationId": 1,
+      "DesignationTitle": "Project Manager",
+      "CreatedDate": "2019-03-20",
+      "ModifiedDate": "",
+      "DeleteDate": ""
+    }
+  ],
+  "domain": [
+    {
+      "id": 18,
+      "domainName": "Naim",
+      "description": "jahjshajsh"
+    },
+    {
+      "id": 19,
+      "domainName": "NAim",
+      "description": "sdsdsd"
+    },
+    {
+      "id": 20,
+      "domainName": "xscsa",
+      "description": "sacsa"
+    },
+    {
+      "id": 21,
+      "domainName": "ghg",
+      "description": "fgf"
+    }
+  ]
+}

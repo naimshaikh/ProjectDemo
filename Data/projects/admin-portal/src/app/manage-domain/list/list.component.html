@@ -1,0 +1,201 @@
+<!-- <div *ngFor="let list of domainList">
+  {{list.DomainId}}
+  {{list.DomainName}}
+  {{list.Description}}
+</div> -->
+
+<mat-card>
+  <mat-card-header>
+    <mat-toolbar class="toolbar">
+      <mat-card-title>Domain List</mat-card-title>
+      <span class="toolbar-spacer"></span>
+      <mat-icon (click)="addDomain()">add</mat-icon>
+    </mat-toolbar>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="container">
+      <table class="table">
+        <thead>
+          <th>Domain Name</th>
+          <th>Description</th>
+        </thead>
+        <tr *ngFor="let list of domainList">
+          <td>{{list.domainId}}</td>
+          <td>{{list.domainName}}</td>
+          <td>{{list.description}}</td>
+          <td>
+            <mat-icon (click)="upadateDomain(list);">edit</mat-icon>
+          </td>
+          <td>
+            <mat-icon (click)="deleteDomainById(list.id);">delete</mat-icon>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+
+<!-- <div
+  class="section-heading d-flex justify-content-between align-items-center p-2 flex-shrink-0 border border-bottom-dark">
+  <h5 class="title-heading m-0 text-module-heading">Manage Vacancies</h5>
+  <button type="button" class="btn btn-info" (click)="addDomain()"><span class="fa fa-plus" aria-hidden="true"></span>
+    ADD
+    NEW</button>
+</div>
+ Start: Table -->
+<!-- <div class="table-container px-3 overflow-auto "> -->
+
+<!-- Table heading -->
+
+<!-- <table class="table table-responsive-md table-borderless m-0 ">
+  <thead class="table-header w-100 px-2 pt-2 ">
+    <tr class="table-heading text-table-heading ">
+      <th class="col-s-1">NO.</th>
+      <th class="col-s-2">Domain Name</th>
+      <th class="col-s-2">Description</th>
+    </tr>
+  </thead>
+  <tbody class="px-2 overflow-auto pb-2">
+    <tr class="table-data">
+      <td>1</td>
+      <td>Jr.Developer</td>
+      <td>2</td>
+      <td>2</td>
+      <td>Technology</td>
+      <td>HTML</td>
+      <td>Published</td>
+      <td>
+        <a href="#"> <img src="img/logo/Web/actions_close.png" alt="close-icon">
+        </a>
+      </td>
+    </tr>
+    <tr class="table-data">
+      <td>2</td>
+      <td>UI Developer</td>
+      <td>2</td>
+      <td>3</td>
+      <td>UI</td>
+      <td>Adobe PS</td>
+      <td>Scheduled</td>
+      <td>
+        <a href="#">
+          <img src="img/logo/Web/actions_edit.png" alt="Edit-icon" class="operation-icon">
+        </a>
+        <a href="#">
+          <img src="img/logo/Web/actions_duplicate.png" alt="copy-icon" class="operation-icon">
+        </a>
+        <a href="#">
+          <img src="img/logo/Web/actions_cancel.png" alt="close-icon" class="operation-icon">
+        </a>
+      </td>
+    </tr>
+    <tr class="table-data">
+      <td>3</td>
+      <td>Sr.Developer</td>
+      <td>3</td>
+      <td>3</td>
+      <td>Technology</td>
+      <td>Android</td>
+      <td>Saved</td>
+      <td>
+        <a href="#"> <img src="img/logo/Web/actions_edit.png" alt="Edit-icon" class="operation-icon">
+        </a>
+        <a href="#">
+          <img src="img/logo/Web/actions_duplicate.png" alt="copy-icon" class="operation-icon">
+        </a>
+        <a href="#">
+          <img src="img/logo/Web/actions_delete.png" alt="delete-icon" class="operation-icon">
+        </a>
+      </td>
+    </tr>
+    <tr class="table-data">
+      <td>4</td>
+      <td>Tech Lead</td>
+      <td>1</td>
+      <td>5+</td>
+      <td>Technology</td>
+      <td>.NET</td>
+      <td>Published</td>
+      <td>
+        <a href="#"> <img src="img/logo/Web/actions_close.png" alt="close-icon">
+        </a>
+      </td>
+    </tr>
+
+    <tr class="table-data">
+      <td>5</td>
+      <td>Project Manager</td>
+      <td>1</td>
+      <td>5+</td>
+      <td>Project Manager</td>
+      <td>.NET</td>
+      <td>Scheduled</td>
+      <td>
+        <a href="#"> <img src="img/logo/Web/actions_edit.png" alt="Edit-icon" class="operation-icon">
+        </a>
+        <a href="#"> <img src="img/logo/Web/actions_duplicate.png" alt="copy-icon" class="operation-icon"></a>
+        <a href="#"> <img src="img/logo/Web/actions_cancel.png" alt="close-icon" class="operation-icon">
+        </a>
+      </td>
+    </tr>
+    <tr class="table-data">
+      <td>6</td>
+      <td>Business Analyst </td>
+      <td>2</td>
+      <td>2+</td>
+      <td>Business Analyst</td>
+      <td>-</td>
+      <td>Scheduled</td>
+      <td>
+        <a href="#"> <img src="img/logo/Web/actions_edit.png" alt="Edit-icon" class="operation-icon"></a>
+        <a href="#"> <img src="img/logo/Web/actions_duplicate.png" alt="copy-icon" class="operation-icon"></a>
+        <a href="#"> <img src="img/logo/Web/actions_cancel.png" alt="close-icon" class="operation-icon"></a>
+      </td>
+    </tr>
+
+    <tr class="table-data">
+      <td>7</td>
+      <td>Operations</td>
+      <td>2</td>
+      <td>2</td>
+      <td>Management</td>
+      <td>-</td>
+      <td>Saved</td>
+      <td>
+        <a href="#">
+          <img src="img/logo/Web/actions_edit.png" alt="Edit-icon" class="operation-icon">
+        </a>
+        <a href="#">
+          <img src="img/logo/Web/actions_duplicate.png" alt="copy-icon" class="operation-icon">
+        </a>
+        <a href="#">
+          <img src="img/logo/Web/actions_delete.png" alt="delete-icon" class="operation-icon">
+        </a>
+      </td>
+    <tr class="table-data">
+      <td>8</td>
+      <td>Accountant</td>
+      <td>2</td>
+      <td>2+</td>
+      <td>Finance</td>
+      <td>-</td>
+      <td>Saved</td>
+      <td>
+        <a href="#">
+          <img src="img/logo/Web/actions_edit.png" alt="Edit-icon" class="operation-icon">
+        </a>
+        <a href="#"> <img src="img/logo/Web/actions_duplicate.png" alt="copy-icon" class="operation-icon">
+        </a>
+        <a href="#">
+          <img src="img/logo/Web/actions_delete.png" alt="delete-icon" class="operation-icon">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div> -->
+
+<!-- start : Add vacancy Form  -->
+<!-- <aside class="form-section bg-white d-flex flex-column flex-grow-1 position-absolute h-100"> -->

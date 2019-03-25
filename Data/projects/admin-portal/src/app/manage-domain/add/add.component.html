@@ -1,0 +1,95 @@
+<!-- <div>
+  <form [formGroup]="domainListForm" (ngSubmit)="addDomain();">
+     <table>
+      <tr>
+        <td>Enter Domain Name</td>
+        <td><input formControlName="domainName">
+          <label *ngIf="domainListForm.get('domainName').invalid && processValidation" [ngClass]="'error'"> Name is
+            required.
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td>Enter Description</td>
+        <td><input formControlName="description">
+          <label *ngIf="domainListForm.get('description').invalid && processValidation" [ngClass]="'error'"> Description
+            is
+            required. </label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button>CREATE</button>
+        </td>
+      </tr>
+    </table> 
+    <div class="form-group">
+      <label for="Job-name">domainName</label>
+      <input type="text" class="form-control" formControlName="domainName"
+        [ngClass]="{ 'is-invalid': submitted && formControls.domainName.errors }">
+      <div *ngIf="submitted && formControls.domainName.errors" class="alert alert-danger">
+        <div *ngIf="formControls.domainName.errors.required"> domainName is required</div>
+      </div>
+    </div>
+    <button type=submit>CREATE</button>
+  </form>
+</div> -->
+<mat-card-header>
+  <mat-toolbar class="toolbar">
+    <mat-card-title>Domian List</mat-card-title>
+    <span class="toolbar-spacer"></span>
+    <mat-icon (click)="onNoClick()">cancel</mat-icon>
+  </mat-toolbar>
+</mat-card-header>
+<mat-card-content>
+  <div class="container">
+    <form [formGroup]="domainListForm" (ngSubmit)="addDomain();">
+      <div class=" form-group">
+        <div class="row">
+          <div class="col-md-6">
+            <label>Domian Name</label>
+            <input type="text" formControlName="domainName" class="form-control">
+          </div>
+          <div class="col-md-6">
+            <label>Description</label>
+            <input type="text" formControlName="description" class="form-control">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <button type="submit" class="btn btn-success">
+              <mat-icon>save</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</mat-card-content>
+
+<!-- Start: form -->
+<!-- <div class="h-100">
+  <h4 class=" text-module-heading m-0">Add New Domian</h4>
+  <a href="#">
+    <img src="img/logo/Web/close.png" alt="close">
+  </a>
+  <div class="form-wrapper pt-2 d-flex mx-auto overflow-auto h-100 w-100">
+    <form class="form" [formGroup]="domainListForm" (ngSubmit)="addDomain();">
+      <div class="form-group">
+        <label for="Job-name">Domian Name</label>
+        <input class="form-control form-control-sm" type="text" id="Job-name" formControlName="domainName">
+      </div>
+      <div class="form-group">
+        <label for="vacancy">Description</label>
+        <input class="form-control form-control-sm" id="vacancy" type="text" formControlName="description">
+      </div>
+    </form>
+  </div>
+  <footer class="form-foot p-3 ">
+    <button type="button" class="btn btn-info btn-sm px-3">Save</button>
+    <button type="button" class="btn btn-info btn-sm px-3" (click)="onNoClick()">Cancel</button>
+  </footer>
+</div> -->
+<!-- start : Add vacancy Form -->
+
+<!-- End : Table-Content -->
